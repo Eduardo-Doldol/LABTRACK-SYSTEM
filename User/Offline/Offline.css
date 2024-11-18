@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  font-size: small;
+}
+
+body {
+  position: relative; 
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;    
+}
+
+body::before {
+  content: "";                    
+  position: absolute;              
+  top: 0;                          
+  left: 0;                         
+  right: 0;                       
+  bottom: 0;                       
+  background-image: url(../../Images/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.50;                  
+}
+
+header {
+  padding: 20px;
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  color: white;
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  width: 100%; 
+}
+
+.back {
+  display: flex; 
+  align-items: center; 
+  margin-bottom: 90px;
+  margin-top: -10px;
+}
+
+.back p {
+  color: white;
+}
+
+.arrow {
+  margin-left: -6px;  
+  margin-right: 3px;
+  font-size: 20px; 
+  color: black; 
+  text-decoration: none; 
+  margin-top: -4px;
+}
+
+.underline {
+  height: 3px; 
+  background-color: white; 
+  width: 7%; 
+  margin-left: -6.1%;
+  margin-bottom: 35px;
+  margin-top: -40px;
+}
+
+.logo-img {
+  display: flex; 
+  justify-content: center; 
+  flex-grow: 1; 
+  margin-right: 8%;
+}
+
+.logo {
+  width: 58px; 
+  height: auto; 
+  margin: 0px 25px; 
+}
+
+.border1 {
+  width: 50%;
+  height: 380px;
+  background: rgba(15, 13, 6, 0.53); 
+  color: white;
+  padding: 85px 20px;
+  position: relative; 
+}
+
+.offline { 
+  position: absolute; 
+  top: 25px; 
+  left: 37%;
+  font-size: 24px;
+}
+
+.border2 {
+  width: 82%;
+  height: 210px;
+  background: rgb(216, 212, 212);
+  opacity: 1;
+  color: black;
+  padding: 22px 3%;
+  margin: 0 auto;
+}
+
+.box {
+  display: flex;
+  flex-direction: column; 
+  margin-bottom: 15px; 
+}
+
+label {
+  margin-bottom: 5px; 
+}
+
+input {
+  padding: 5px; 
+  border: 1px solid #ccc; 
+  border-radius: 5px; 
+}
+
+button {
+  display: block;
+  width: 100%;  
+  padding: 5px;
+  background-color: black; 
+  color: white; 
+  border: 1px solid black; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  margin-top: 10px;
+  margin-bottom: 25px;
+  cursor: pointer;
+}

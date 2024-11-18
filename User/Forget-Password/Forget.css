@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  font-size: small;
+}
+
+body {
+  position: relative; 
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;    
+}
+
+body::before {
+  content: "";                    
+  position: absolute;              
+  top: 0;                          
+  left: 0;                         
+  right: 0;                       
+  bottom: 0;                       
+  background-image: url(../../Images/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.50;                  
+}
+
+header {
+  padding: 20px;
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  color: white;
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  width: 100%; 
+}
+
+.back {
+  display: flex; 
+  align-items: center; 
+  margin-bottom: 90px;
+  margin-top: -10px;
+}
+
+.back p {
+  color: white;
+}
+
+.arrow {
+  margin-left: -6px;  
+  margin-right: 3px;
+  font-size: 20px; 
+  color: black; 
+  text-decoration: none; 
+  margin-top: -4px;
+}
+
+.underline {
+  height: 3px; 
+  background-color: white; 
+  width: 7%; 
+  margin-left: -6.1%;
+  margin-bottom: 35px;
+  margin-top: -40px;
+}
+
+.logo-img {
+  display: flex; 
+  justify-content: center; 
+  flex-grow: 1; 
+  margin-left: -100px;  
+}
+
+.logo {
+  width: 58px; 
+  height: auto; 
+  margin: 0px 25px; 
+}
+
+.border1 {
+  width: 50%;
+  height: 380px;
+  background: rgba(15, 13, 6, 0.53); 
+  color: white;
+  padding: 90px 20px;
+  position: relative; 
+}
+
+.forget { 
+  position: absolute; 
+  top: 40px; 
+  left: 35%;
+  font-size: 28px;
+}
+
+.border2 {
+  width: 72%;
+  height: 180px;
+  background: white;
+  opacity: 1;
+  color: black;
+  padding: 23px 4%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.box {
+  display: flex;
+  flex-direction: column; 
+  margin-bottom: 15px; 
+}
+
+label {
+  margin-bottom: 5px; 
+}
+
+input {
+  padding: 10px; 
+  border: 1px solid #ccc; 
+  border-radius: 2px; 
+  width: 100%;
+  height: 40px;
+} 
+
+.button-container {
+  display: flex;
+  justify-content: center; 
+  gap: 10px; 
+}
+
+button {
+  width: 30%;  
+  padding: 9px; 
+  background-color: black; 
+  color: white;
+  border: 1px solid black; 
+  border-radius: 2px; 
+  cursor: pointer;
+  margin-top: 10px; 
+}
+
+.button-cancel {
+  background-color: white;
+  color: black;
+  border: white;
+}
