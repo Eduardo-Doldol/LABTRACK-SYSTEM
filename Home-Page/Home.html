@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LabTrack Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Home.css">
+</head>
+<body>
+    <div class="sidebar">
+
+        <img src="../../Images/LabTrack.png" alt="Logo 1">
+      <nav>
+        <a href="Home.html"><img src="../../Images/Home.png" alt="Home Icon">Home</a>
+        <a href="#"><img src="../../Images/User.png" alt="User Icon">User Management</a>
+        <a href="#"><img src="../../Images/Schedule.png" alt="Schedule Icon">Schedule Manager</a>
+        <a href="#"><img src="../../Images/Unit.png" alt="Unit Icon">Unit Records</a>
+        <a href="#"><img src="../../Images/Report.png" alt="Report Icon">Reports</a>
+      </nav>
+        <div class="about">
+            <a href="#">About Us</a>
+            <button>Log out</button>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="header">
+            <h2>Welcome to LabTrack!</h2>
+            <div class="logos">
+                <img src="../../Images/DYCI.png" alt="Logo 1">
+                <img src="../Images/CCS.png" alt="Logo 2">
+            </div>
+        </div>
+
+        <div class="overview">
+            <div class="stat">
+                <h1>04</h1>
+                <p>Number Of Students Visit</p>
+            </div>
+            <div class="stat">
+                <h1>31</h1>
+                <p>Total Usage Time For The Month</p>
+            </div>
+            <div class="stat">
+                <h1>64</h1>
+                <p>Total Student Daily Visit</p>
+            </div>
+        </div>
+
+        <div class="charts">
+            <div class="chart">
+                <h3>Desktop Usage</h3>
+                <canvas id="desktopChart"></canvas>
+            </div>
+            <div class="summary">
+                <h3>Summary</h3>
+                <canvas id="summaryChart"></canvas>
+            </div>
+        </div>
+
+        <div class="logins">
+            <h3>Total Logins</h3>
+            <canvas id="loginChart"></canvas>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Chart.js logic for Desktop Chart
+        const ctx1 = document.getElementById('desktopChart').getContext('2d');
+        new Chart(ctx1, {
+            type: 'bar',
+            data: {
+                labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+                datasets: [
+                    {
+                        label: 'PC Used',
+                        data: [70, 80, 60, 90, 100, 80],
+                        backgroundColor: '#3f51b5'
+                    },
+                    {
+                        label: 'PC Not Used',
+                        data: [30, 20, 40, 10, 0, 20],
+                        backgroundColor: '#f44336'
+                    }
+                ]
+            }
+        });
+
+        // Chart.js logic for Summary Chart
+        const ctx2 = document.getElementById('summaryChart').getContext('2d');
+        new Chart(ctx2, {
+            type: 'pie',
+            data: {
+                labels: ['PC Used', 'PC Not Used', 'PC Damaged'],
+                datasets: [
+                    {
+                        data: [50, 30, 20],
+                        backgroundColor: ['#3f51b5', '#f44336', '#ffeb3b']
+                    }
+                ]
+            }
+        });
+
+        // Chart.js logic for Login Chart
+        const ctx3 = document.getElementById('loginChart').getContext('2d');
+        new Chart(ctx3, {
+            type: 'line',
+            data: {
+                labels: ['M', 'T', 'W', 'TH', 'F', 'ST'],
+                datasets: [
+                    {
+                        label: 'IT Lab',
+                        data: [200, 400, 600, 800, 1000, 1200],
+                        borderColor: '#3f51b5',
+                        borderWidth: 2,
+                        fill: false
+                    }
+                ]
+            }
+        });
+    </script>
+</body>
+</html>
